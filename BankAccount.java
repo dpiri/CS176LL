@@ -1,67 +1,63 @@
-/**
-   A bank account has a balance that can be changed by
-   deposits and withdrawals.
-*/
-public class BankAccount implements Mesasurable
-{
-   private double balance;
 
-   
-   public double getMeasure()
-   {
-      return balance;
-   }
-   /**
-      Constructs a bank account with a zero balance.
-   */
-   public BankAccount()
-   {
-      balance = 0;
-   }
+public class BankAccount implements Measurable {
 
-   /**
-      Constructs a bank account with a given balance.
-      @param initialBalance the initial balance
-   */
-   public BankAccount(double initialBalance)
-   {
-      balance = initialBalance;
-   }
+	   private double balance;
 
-   /**
-      Deposits money into the bank account.
-      @param amount the amount to deposit
-   */
-   public void deposit(double amount)
-   {
-      balance = balance + amount;
-   }
+	   /**
+	      Constructs a bank account with a zero balance.
+	   */
+	   public BankAccount()
+	   {
+	      balance = 0;
+	   }
 
-   /**
-      Withdraws money from the bank account.
-      @param amount the amount to withdraw
-   */
-   public void withdraw(double amount)
-   {
-      balance = balance - amount;
-   }
+	   /**
+	      Constructs a bank account with a given balance.
+	      @param initialBalance the initial balance
+	   */
+	   public BankAccount(double initialBalance)
+	   {
+	      balance = initialBalance;
+	   }
 
-   /**
-      Gets the current balance of the bank account.
-      @return the current balance
-   */
-   public double getBalance()
-   {
-      return balance;
-   }
+	   /**
+	      Deposits money into the bank account.
+	      @param amount the amount to deposit
+	   */
+	   public void deposit(double amount)
+	   {
+	      balance = balance + amount;
+	   }
 
-   /**
-      Adds interest to the bank account.
-      @param rate The percentage rate of interest gained.
-   */
-   public void addInterest(double rate)
-   {
-      balance = balance + balance * rate / 100;
-   }
-}
+	   /**
+	      Withdraws money from the bank account.
+	      @param amount the amount to withdraw
+	   */
+	   public void withdraw(double amount)
+	   {
+	      balance = balance - amount;
+	   }
+
+	   /**
+	      Gets the current balance of the bank account.
+	      @return the current balance
+	   */
+	   public double getBalance()
+	   {
+	      return balance;
+	   }
+
+	   /**
+	      Adds interest to the bank account.
+	      @param rate The percentage rate of interest gained.
+	   */
+	   public void addInterest(double rate)
+	   {
+	      balance = balance + balance * rate / 100;
+	   }
+	   
+	   public double getMeasure() {
+			return balance; 
+		}
+	}
 

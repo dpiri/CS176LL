@@ -1,10 +1,10 @@
+
 public class Data {
 
-	   public static double average(Mesasurable[] objects)
+	   public static double average(Measurable[] objects)
 	   {
 	      double sum = 0;
-	      
-	      for (Mesasurable obj : objects)
+	      for (Measurable obj : objects)
 	      {
 	         sum = sum + obj.getMeasure();
 	      }
@@ -18,14 +18,20 @@ public class Data {
 	      }
 	   }
 
-	   public static double max(Mesasurable[] objects)
+	   /**
+	      Computes the maximum of the measures of the given objects.
+	      @param objects an array of Measurable objects
+	      @return the maximum of the measures, null if array is empty
+	   */
+	   public static double max(Measurable[] objects)
 	   {
 	      if (objects.length == 0)
 	      {
 	         return 0;
 	      }
+	      //Measurable max = objects[0];
 	      double max = 0;
-	      for (Mesasurable obj : objects)
+	      for (Measurable obj : objects)
 	      {
 	         if (obj.getMeasure() > max)
 	         {
@@ -34,13 +40,7 @@ public class Data {
 	      }
 
 	      return max;
-	   
+	   }
 	}
+	
 
-	public static double min(Mesasurable[] objects) {
-		
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-}

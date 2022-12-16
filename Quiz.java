@@ -1,15 +1,17 @@
-public class Quiz implements Mesasurable
-{
+
+public class Quiz implements Measurable {
+
+	private double grade;
 	
-	private double score;
-	
-	public Quiz(String name, int score) 
+	public Quiz (double grade)
 	{
-		this.score = score;
+		this.grade = grade;
 	}
 	
-	public double getMeasure()
+	public double getMeasure() 
 	{
-		return score;
+		return grade;
 	}
+
 }
+
